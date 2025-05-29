@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './Components/Header/Header';
+import Nav from './Components/Nav/Nav';
+import Footer from './Components/Footer/Footer';
+import Index from './Components/Index/index';
+import Cadastro from './Components/Cadastro/Cadastro';
+import Login from './Components/Login/Login';
+import Perfil from './Components/Perfil/Perfil';
+import Cad_Produto from './Components/Cad_Produtos/Cadastro_Produto';
+import Produto from './Components/Produtos/Produtos';
 
-function App() {
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header/>
+      <Perfil/>
+      <Nav/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Index/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/cadastro' element={<Cadastro/>}/>
+          <Route path='/produto' element={<Produto/>}/>
+          <Route path='/cad' element={<Cad_Produto/>}/>
+        </Routes>
+      </BrowserRouter>
+      <Footer/>
+    </>
   );
 }
-
-export default App;

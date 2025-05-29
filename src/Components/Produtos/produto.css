@@ -1,0 +1,31 @@
+.container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .input-busca {
+      margin-bottom: 30px;
+      padding: 5px;
+    }
+
+    table {
+      border-collapse: collapse;
+      border: 1px solid #000;
+      margin-bottom: 30px;
+    }
+
+    th, tr {
+      border: 1px solid #000;
+      padding: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .container {
+        padding: 15px;
+      }
+    }
