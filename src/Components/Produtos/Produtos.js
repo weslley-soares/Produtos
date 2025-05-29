@@ -50,7 +50,7 @@ export default function Produto() {
         onChange={(e) => setBusca(e.target.value)}
         className="input-busca"
       />
-
+      <div id='tabela'>
       {carregando ? (
         <p>Carregando produtos...</p>
       ) : produto.length > 0 ? (
@@ -83,6 +83,7 @@ export default function Produto() {
       ) : (
         <p>Nenhum produto encontrado.</p>
       )}
+      </div>
     </div>
   );
 }
